@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Will you be my valentine? 🥺</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="page-container">
+        <h1 class="title">I only need to know...</h1>
+        <p class="text">My lady, Will you be my valentine? 🥺</p>
+        <div class="button-cont">
+          <button class="button" id="reveal-button">Yes!❤️</button>
+          <button class="button" id="growth-button">No😒</button>
+        </div>
+
+        <div id="valentine-message" style="display: none">
+          <p class="love-text">
+            My godda! 🥰 I really love you! Thx for accept ❤️
+          </p>
+          <img
+            class="cat-image"
+            src="https://i.pinimg.com/736x/34/99/da/3499dad4903e939baa385a20d31d25bf.jpg"
+            alt="I love you"
+          />
+        </div>
+      </div>
+      <footer>Made with 💖 by FrigoAlex for My Godda 💘</footer>
+    </div>
+    <script>
+      const revealButton = document.getElementById("reveal-button");
+      const growthButton = document.getElementById("growth-button");
+      const valentineMessage = document.getElementById("valentine-message");
+
+      revealButton.addEventListener("click", () => {
+        valentineMessage.style.display = "block";
+      });
+
+      let growthFactor = 1.1;
+      let shrinkFactor = 0.9;
+
+      growthButton.addEventListener("click", () => {
+        growthFactor += 0.15;
+        shrinkFactor -= 0.15;
+        revealButton.style.transform = `scale(${growthFactor})`;
+        growthButton.style.transform = `scale(${shrinkFactor})`;
+      });
+    </script>
+  </body>
+</html>
