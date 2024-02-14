@@ -49,7 +49,7 @@
       let shrinkFactor = 0.9;
 
       growthButton.addEventListener("click", () => {
-        growthFactor += 0.15;
+        growthFactor += 0.05;
         shrinkFactor -= 0.15;
         revealButton.style.transform = `scale(${growthFactor})`;
         growthButton.style.transform = `scale(${shrinkFactor})`;
